@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Product" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/product_resource.gd" id="1_08f5k"]
+
+[resource]
+script = ExtResource("1_08f5k")
+product_name = "Soda"
+product_icon = "res://icon.svg"
+product_price = 3.99

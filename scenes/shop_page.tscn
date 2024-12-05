@@ -1,0 +1,296 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxqax48xfuc4e"]
+
+[ext_resource type="Texture2D" uid="uid://un2a1wio6oh0" path="res://sprites/website-background-templates.png" id="1_a5vhh"]
+[ext_resource type="Texture2D" uid="uid://cbs33q5bkncpq" path="res://icon.svg" id="2_hjlgs"]
+[ext_resource type="Script" path="res://scripts/product.gd" id="3_b2ay2"]
+
+[node name="Shop Page" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 323)
+texture = ExtResource("1_a5vhh")
+region_enabled = true
+region_rect = Rect2(0, 0, 1152, 648)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control"]
+offset_left = 60.0
+offset_top = 108.0
+offset_right = 1092.0
+offset_bottom = 608.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Chicken"
+product_icon = "res://icon.svg"
+product_price = 2.99
+
+[node name="TextureRect2" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Beef"
+product_icon = "res://icon.svg"
+product_price = 26.0
+
+[node name="TextureRect3" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Water"
+product_icon = "res://icon.svg"
+product_price = 1.0
+
+[node name="TextureRect4" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Soda"
+product_icon = "res://icon.svg"
+product_price = 3.99
+
+[node name="TextureRect5" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Bag"
+product_icon = "res://icon.svg"
+product_price = 64.89
+
+[node name="TextureRect6" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Glasses"
+product_icon = "res://icon.svg"
+product_price = 29.89
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Chicken"
+product_icon = "res://icon.svg"
+product_price = 2.99
+
+[node name="TextureRect2" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Beef"
+product_icon = "res://icon.svg"
+product_price = 26.0
+
+[node name="TextureRect3" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Water"
+product_icon = "res://icon.svg"
+product_price = 1.0
+
+[node name="TextureRect4" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Soda"
+product_icon = "res://icon.svg"
+product_price = 3.99
+
+[node name="TextureRect5" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Bag"
+product_icon = "res://icon.svg"
+product_price = 64.89
+
+[node name="TextureRect6" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Glasses"
+product_icon = "res://icon.svg"
+product_price = 29.89
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Chicken"
+product_icon = "res://icon.svg"
+product_price = 2.99
+
+[node name="TextureRect2" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Beef"
+product_icon = "res://icon.svg"
+product_price = 26.0
+
+[node name="TextureRect3" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Water"
+product_icon = "res://icon.svg"
+product_price = 1.0
+
+[node name="TextureRect4" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Soda"
+product_icon = "res://icon.svg"
+product_price = 3.99
+
+[node name="TextureRect5" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Bag"
+product_icon = "res://icon.svg"
+product_price = 64.89
+
+[node name="TextureRect6" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Glasses"
+product_icon = "res://icon.svg"
+product_price = 29.89
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Chicken"
+product_icon = "res://icon.svg"
+product_price = 2.99
+
+[node name="TextureRect2" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Beef"
+product_icon = "res://icon.svg"
+product_price = 26.0
+
+[node name="TextureRect3" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Water"
+product_icon = "res://icon.svg"
+product_price = 1.0
+
+[node name="TextureRect4" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Soda"
+product_icon = "res://icon.svg"
+product_price = 3.99
+
+[node name="TextureRect5" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Bag"
+product_icon = "res://icon.svg"
+product_price = 64.89
+
+[node name="TextureRect6" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Glasses"
+product_icon = "res://icon.svg"
+product_price = 29.89
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Chicken"
+product_icon = "res://icon.svg"
+product_price = 2.99
+
+[node name="TextureRect2" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Beef"
+product_icon = "res://icon.svg"
+product_price = 26.0
+
+[node name="TextureRect3" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Water"
+product_icon = "res://icon.svg"
+product_price = 1.0
+
+[node name="TextureRect4" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Soda"
+product_icon = "res://icon.svg"
+product_price = 3.99
+
+[node name="TextureRect5" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Bag"
+product_icon = "res://icon.svg"
+product_price = 64.89
+
+[node name="TextureRect6" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_b2ay2")
+product_name = "Glasses"
+product_icon = "res://icon.svg"
+product_price = 29.89
