@@ -1,14 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://bxqax48xfuc4e"]
+[gd_scene load_steps=5 format=3 uid="uid://bxqax48xfuc4e"]
 
-[ext_resource type="Texture2D" uid="uid://bqerw60yrtsr4" path="res://sprites/pexels-alscre-2847648.jpg" id="1_2ouli"]
+[ext_resource type="Texture2D" uid="uid://bqerw60yrtsr4" path="res://sprites/pexels-alscre-2847648.jpg" id="1_ecbo1"]
 [ext_resource type="Texture2D" uid="uid://cbs33q5bkncpq" path="res://icon.svg" id="2_hjlgs"]
 [ext_resource type="Script" path="res://scripts/product.gd" id="3_b2ay2"]
+[ext_resource type="Script" path="res://scripts/shop_cart_switch_button.gd" id="3_tfnh5"]
 
 [node name="Shop Page" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(576, 323)
-texture = ExtResource("1_2ouli")
+texture = ExtResource("1_ecbo1")
 region_enabled = true
 region_rect = Rect2(500, 2000, 1152, 648)
 
@@ -18,12 +19,22 @@ anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 
+[node name="Cart Page Button" type="TextureRect" parent="Control"]
+layout_mode = 2
+offset_left = 528.0
+offset_top = 551.0
+offset_right = 656.0
+offset_bottom = 679.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_hjlgs")
+script = ExtResource("3_tfnh5")
+
 [node name="ScrollContainer" type="ScrollContainer" parent="Control"]
 layout_mode = 0
 offset_left = 60.0
 offset_top = 108.0
 offset_right = 1092.0
-offset_bottom = 608.0
+offset_bottom = 544.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/ScrollContainer"]
 layout_mode = 2

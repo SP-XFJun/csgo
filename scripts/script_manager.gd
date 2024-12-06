@@ -1,9 +1,19 @@
 extends Node
 
-var product:Resource = Product
+var cart:Array = []
 
-func set_current_product(cur_product:Resource):
-	product = cur_product
+func add_product(product:Dictionary):
+	#add product to cart
+	var found = false
+	for i in range(cart.size()):
+		if cart[i]["name"] == product["name"]:
+			found = true
+			cart[i]["amount"] = cart[i]["amount"] + product["amount"]
+			break
+	if !found:
+		cart.append(product)
 
-func get_current_product():
-	return product
+func remove_product(product:Resource):
+	#remove product from cart
+	if cart.find(product) != -1:
+		cart.remove_at(cart.find(product))
