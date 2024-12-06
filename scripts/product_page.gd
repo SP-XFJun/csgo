@@ -12,7 +12,14 @@ func _ready() -> void:
 	return_button.button_down.connect(_returned)
 	var current_product = load("res://resources/current_product.tres")
 	if current_product:
-		product_icon.texture.resource_path = current_product.product_icon
+		#adjusting the product image
+		var img = Image.load_from_file(current_product.product_icon)
+		img.resize(img.get_width() * 0.5, img.get_height() * 0.5)
+		var image := Texture2D.new()
+		image = ImageTexture.create_from_image(img)
+		image.update(img)
+		product_icon.texture = image
+		
 		product_name.text = current_product.product_name
 		product_price.text = "$" + str(current_product.product_price)
 		price = current_product.product_price

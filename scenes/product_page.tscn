@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://1lcsomb4o70n"]
 
 [ext_resource type="Script" path="res://scripts/product_page.gd" id="1_fu36u"]
-[ext_resource type="Texture2D" uid="uid://un2a1wio6oh0" path="res://sprites/website-background-templates.png" id="1_oekhi"]
 [ext_resource type="Texture2D" uid="uid://cbs33q5bkncpq" path="res://icon.svg" id="2_1u15u"]
+[ext_resource type="Texture2D" uid="uid://bqerw60yrtsr4" path="res://sprites/pexels-alscre-2847648.jpg" id="2_xne7p"]
 
 [sub_resource type="SystemFont" id="SystemFont_ynsw5"]
 
@@ -11,9 +11,9 @@ script = ExtResource("1_fu36u")
 
 [node name="Product Icon" type="Sprite2D" parent="."]
 position = Vector2(576, 323)
-texture = ExtResource("1_oekhi")
+texture = ExtResource("2_xne7p")
 region_enabled = true
-region_rect = Rect2(0, 0, 1152, 648)
+region_rect = Rect2(500, 2000, 1152, 648)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
