@@ -17,3 +17,11 @@ offset_right = 128.0
 offset_bottom = 160.0
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
+
+[node name="Action" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_top = 80.0
+offset_right = 128.0
+offset_bottom = 112.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true

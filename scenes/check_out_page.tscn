@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsj1pirby7v5q"]
+
+[ext_resource type="Script" path="res://scripts/check_out_page.gd" id="1_5gond"]
+[ext_resource type="Texture2D" uid="uid://bqerw60yrtsr4" path="res://sprites/pexels-alscre-2847648.jpg" id="2_0j7fe"]
+[ext_resource type="Texture2D" uid="uid://cbs33q5bkncpq" path="res://icon.svg" id="3_impkn"]
+
+[sub_resource type="SystemFont" id="SystemFont_ynsw5"]
+
+[node name="Check Out Page" type="Node2D"]
+script = ExtResource("1_5gond")
+
+[node name="Product Icon" type="Sprite2D" parent="."]
+position = Vector2(576, 323)
+texture = ExtResource("2_0j7fe")
+region_enabled = true
+region_rect = Rect2(500, 2000, 1152, 648)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 1100.0
+offset_bottom = 600.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_impkn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Label" type="RichTextLabel" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = SubResource("SystemFont_ynsw5")
+theme_override_font_sizes/normal_font_size = 50
+text = "Your total product costs are:"
+
+[node name="Total Price" type="RichTextLabel" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = SubResource("SystemFont_ynsw5")
+theme_override_font_sizes/normal_font_size = 40
+text = "$0.00"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/separation = 20
+
+[node name="Check Out Button" type="Button" parent="Control/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 30
+text = "Check Out"
+
+[node name="Total Cost" type="RichTextLabel" parent="Control/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center][wave amp=20 freq=2]num"
+scroll_active = false
+
+[node name="Return Button" type="Button" parent="Control/VBoxContainer/HBoxContainer2"]
+layout_direction = 3
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 30
+text = "Return"
+flat = true

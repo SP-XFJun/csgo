@@ -60,5 +60,5 @@ func _add():
 		order_count += 1
 
 func _returned():
-	#when return button clicked
+	#when return button is clicked
 	get_tree().change_scene_to_file("res://scenes/shop_page.tscn")
