@@ -32,7 +32,6 @@ jobs:
 
       # Exporting the software
       - name: export software
-        id: export
         # Use latest version (see releases for all versions)
       - uses: firebelley/godot-export@v6.0.0
         with:
