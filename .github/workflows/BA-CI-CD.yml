@@ -24,7 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: checkout
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -33,7 +33,7 @@ jobs:
       # Exporting the software
       - name: export software
         # Use latest version (see releases for all versions)
-      - uses: firebelley/godot-export@v6.0.0
+        uses: firebelley/godot-export@v6.0.0
         with:
           # Defining all the required inputs
           godot_executable_download_url: https://downloads.tuxfamily.org/godotengine/4.0/Godot_v4.0-stable_linux.x86_64.zip
