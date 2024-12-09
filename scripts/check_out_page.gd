@@ -11,7 +11,7 @@ func _ready() -> void:
 	check_out_button.pressed.connect(_check_out)
 	return_button.pressed.connect(_returned)
 	total_price.text = "$" + str(ScriptManager.total_cost)
-	#user will not pay for delivery fee if they did not buy anything
+	#user will not pay for delivery fees if they did not buy anything
 	if ScriptManager.total_cost == 0:
 		total_cost.text = "[wave amp=20 freq=2]$0"
 	else:
