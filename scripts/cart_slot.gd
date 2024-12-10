@@ -25,10 +25,15 @@ func _process(delta: float) -> void:
 		image = ImageTexture.create_from_image(img)
 		image.update(img)
 		texture = image
-		
 		label.text = "[wave amp=10 freq=2]Quantity:" + str(product["amount"])
 	else:
-		texture = load("res://icon.svg")
+		#adjusting the empty slot image
+		var img = Image.load_from_file("res://sprites/product/empty_slot.png")
+		img.resize(img.get_width() * 0.5, img.get_height() * 0.5)
+		var image := Texture2D.new()
+		image = ImageTexture.create_from_image(img)
+		image.update(img)
+		texture = image
 		label.text = ""
 	#manually decreasing mouse click interval
 	if wait_time > 0:

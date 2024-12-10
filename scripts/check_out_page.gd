@@ -11,11 +11,18 @@ func _ready() -> void:
 	check_out_button.pressed.connect(_check_out)
 	return_button.pressed.connect(_returned)
 	total_price.text = "$" + str(ScriptManager.total_cost)
-	#user will not pay for delivery fees if they did not buy anything
+	#user will not pay for delivery fee if they did not buy anything
 	if ScriptManager.total_cost == 0:
 		total_cost.text = "[wave amp=20 freq=2]$0"
 	else:
 		total_cost.text = "[wave amp=20 freq=2]$" + str(ScriptManager.total_cost + 5)
+	#adjusting the background image
+	var img = Image.load_from_file("res://sprites/white background.jpg")
+	img.resize(img.get_width() * 1.5, img.get_height() * 1.5)
+	var image := Texture2D.new()
+	image = ImageTexture.create_from_image(img)
+	image.update(img)
+	$"Product Icon".texture = image
 
 func _check_out():
 	#when user pays the bill, will be worked on
