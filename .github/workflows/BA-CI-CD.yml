@@ -43,7 +43,7 @@ jobs:
 
       # Release and create artifact for the export
       - name: create release
-        uses: ncipollo/release-action@v1.14.0
+        uses: actions/upload-artifact@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           generateReleaseNotes: true
