@@ -16,6 +16,3 @@ func _ready() -> void:
 	image2 = ImageTexture.create_from_image(img2)
 	image2.update(img2)
 	$Sprite2D.texture = image2
-
-func _process(delta: float) -> void:
-	print(1 / delta)
