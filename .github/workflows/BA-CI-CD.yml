@@ -48,4 +48,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           generateReleaseNotes: true
           tag: "${{ github.ref_name }}-${{ github.sha }}"
-          artifacts: 'build_exports/build.exe'
+          artifacts: '/home/runner/.local/share/godot/archives/Windows Desktop.zip'
