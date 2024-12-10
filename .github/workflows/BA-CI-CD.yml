@@ -48,4 +48,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           generateReleaseNotes: true
           tag: "${{ github.ref_name }}-${{ github.sha }}"
-          artifacts: '/home/runner/.local/share/godot/archives/Windows Desktop.zip'
+          artifacts: '/home/runner/.local/share/godot/archives/SSH Shared Grocery Order.zip'
