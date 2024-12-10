@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Product" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://scripts/product_resource.gd" id="1_gwj33"]
+[ext_resource type="Script" path="res://scripts/product_resource.gd" id="1_qghrt"]
 
 [resource]
-script = ExtResource("1_gwj33")
-product_name = "CSGO Shanghai Major Pass"
-product_icon = "res://sprites/product/csgo_pass.png"
-product_price = 69.99
+script = ExtResource("1_qghrt")
+product_name = "Kiwi"
+product_icon = "res://sprites/product/kiwi.png"
+product_price = 7.99
 product_amount = 0

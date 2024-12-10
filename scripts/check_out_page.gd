@@ -16,6 +16,13 @@ func _ready() -> void:
 		total_cost.text = "[wave amp=20 freq=2]$0"
 	else:
 		total_cost.text = "[wave amp=20 freq=2]$" + str(ScriptManager.total_cost + 5)
+	#adjusting the background image
+	var img = Image.load_from_file("res://sprites/white background.jpg")
+	img.resize(img.get_width() * 1.5, img.get_height() * 1.5)
+	var image := Texture2D.new()
+	image = ImageTexture.create_from_image(img)
+	image.update(img)
+	$"Product Icon".texture = image
 
 func _check_out():
 	#when user pays the bill, will be worked on

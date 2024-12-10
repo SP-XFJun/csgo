@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwy2dvijkfbbf"]
+[gd_scene load_steps=3 format=3 uid="uid://cmsjwvr4yqe22"]
 
 [ext_resource type="Texture2D" uid="uid://cbs33q5bkncpq" path="res://icon.svg" id="1_80v26"]
 [ext_resource type="Script" path="res://scripts/cart_slot.gd" id="2_ox7i8"]
@@ -15,6 +15,7 @@ layout_mode = 0
 offset_top = 128.0
 offset_right = 128.0
 offset_bottom = 160.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 

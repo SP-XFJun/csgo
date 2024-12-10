@@ -30,6 +30,14 @@ func _ready() -> void:
 		image.update(img)
 		product_icon.texture = image
 		
+		#adjusting the background image
+		var img2 = Image.load_from_file("res://sprites/white background.jpg")
+		img2.resize(img2.get_width() * 1.5, img2.get_height() * 1.5)
+		var image2 := Texture2D.new()
+		image2 = ImageTexture.create_from_image(img2)
+		image2.update(img2)
+		$"Product Icon".texture = image2
+		
 		product_name.text = current_product.product_name
 		product_price.text = "$" + str(current_product.product_price)
 		price = current_product.product_price

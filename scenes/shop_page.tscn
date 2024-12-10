@@ -1,17 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxqax48xfuc4e"]
+[gd_scene load_steps=7 format=3 uid="uid://bxqax48xfuc4e"]
 
-[ext_resource type="Texture2D" uid="uid://bqerw60yrtsr4" path="res://sprites/pexels-alscre-2847648.jpg" id="1_ecbo1"]
+[ext_resource type="Script" path="res://scenes/shop_page.gd" id="1_8abb8"]
 [ext_resource type="Texture2D" uid="uid://cbs33q5bkncpq" path="res://icon.svg" id="2_hjlgs"]
+[ext_resource type="Texture2D" uid="uid://b2wifsvg33c63" path="res://sprites/white background.jpg" id="2_t2uxc"]
 [ext_resource type="Script" path="res://scripts/product.gd" id="3_b2ay2"]
 [ext_resource type="Script" path="res://scripts/shop_cart_switch_button.gd" id="3_tfnh5"]
+[ext_resource type="Texture2D" uid="uid://7ge2evxy3b00" path="res://sprites/product/empty_slot.png" id="5_b7nx5"]
 
 [node name="Shop Page" type="Node2D"]
+script = ExtResource("1_8abb8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(576, 323)
-texture = ExtResource("1_ecbo1")
+texture = ExtResource("2_t2uxc")
 region_enabled = true
-region_rect = Rect2(500, 2000, 1152, 648)
+region_rect = Rect2(0, 0, 4608, 2592)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -22,9 +25,9 @@ offset_bottom = 648.0
 [node name="Cart Page Button" type="TextureRect" parent="Control"]
 layout_mode = 2
 offset_left = 528.0
-offset_top = 551.0
+offset_top = 548.0
 offset_right = 656.0
-offset_bottom = 679.0
+offset_bottom = 676.0
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_hjlgs")
 script = ExtResource("3_tfnh5")
@@ -49,7 +52,7 @@ theme_override_constants/separation = 20
 
 [node name="TextureRect" type="TextureRect" parent="Control/ScrollContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_hjlgs")
+texture = ExtResource("5_b7nx5")
 script = ExtResource("3_b2ay2")
 product_name = "Water"
 product_icon = "res://sprites/product/water.png"
