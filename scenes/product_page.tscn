@@ -78,7 +78,6 @@ text = "-1"
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "[center][wave amp=20 freq=2]num"

@@ -36,7 +36,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	#updating the order count display
-	count.text = "[center][wave amp=20 freq=2]" + str(order_count)
+	count.text = "[center][wave amp=20 freq=2][outline_size=10]" + str(order_count)
 
 func _add_cart():
 	#add the current product to the cart
