@@ -47,5 +47,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           generateReleaseNotes: true
-          tag: ${{ github.ref_name }}
+          tag: "${{ github.ref_name }}-${{ github.sha }}"
           artifacts: 'build_exports/build.exe'
