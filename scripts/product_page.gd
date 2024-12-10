@@ -3,6 +3,7 @@ extends Node2D
 @onready var product_icon: TextureRect = $Control/VBoxContainer/HBoxContainer/TextureRect
 @onready var product_name: RichTextLabel = $"Control/VBoxContainer/HBoxContainer/VBoxContainer/Product Name"
 @onready var product_price: RichTextLabel = $Control/VBoxContainer/HBoxContainer/VBoxContainer/Price
+@onready var background: Sprite2D = $"Background"
 
 @onready var add_cart: Button = $"Control/VBoxContainer/HBoxContainer2/Add Cart"
 @onready var remove: Button = $Control/VBoxContainer/HBoxContainer2/remove
@@ -29,6 +30,14 @@ func _ready() -> void:
 		image = ImageTexture.create_from_image(img)
 		image.update(img)
 		product_icon.texture = image
+		
+		#adjusting the background image
+		var img2 = Image.load_from_file("res://sprites/white background.jpg")
+		img2.resize(img2.get_width() * 1.5, img2.get_height() * 1.5)
+		var image2 := Texture2D.new()
+		image2 = ImageTexture.create_from_image(img2)
+		image2.update(img2)
+		background.texture = image2
 		
 		product_name.text = current_product.product_name
 		product_price.text = "$" + str(current_product.product_price)

@@ -15,6 +15,7 @@ layout_mode = 0
 offset_top = 128.0
 offset_right = 128.0
 offset_bottom = 160.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 
