@@ -11,10 +11,20 @@ var wait_time:float = 0
 func _ready() -> void:
 	#run setup
 	gui_input.connect(_on_input)
+<<<<<<< HEAD
 	
 func product_setup():
 	#product setup
 	texture = product_icon
+=======
+	#adjusting the product image
+	var img = Image.load_from_file(product_icon)
+	img.resize(img.get_width() * 1, img.get_height() * 1)
+	var image := Texture2D.new()
+	image = ImageTexture.create_from_image(img)
+	image.update(img)
+	texture = image
+>>>>>>> dc8835aee69eb0af99b50c3aafe1b73f2fdce73f
 
 func _process(delta: float) -> void:
 	#manually decreasing mouse click interval

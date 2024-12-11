@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dice7ud2nhtqc"
-path="res://.godot/imported/back button.png-b7a6c8b5f6984be94dfc9fc9cfa16edc.ctex"
+uid="uid://bgcact7woc6kk"
+path="res://.godot/imported/empty_slot.png-a3bcdad39b5fb4adb71dea38c15a16fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/back button.png"
-dest_files=["res://.godot/imported/back button.png-b7a6c8b5f6984be94dfc9fc9cfa16edc.ctex"]
+source_file="res://sprites/empty_slot.png"
+dest_files=["res://.godot/imported/empty_slot.png-a3bcdad39b5fb4adb71dea38c15a16fc.ctex"]
 
 [params]
 

@@ -10,21 +10,6 @@ var total_cost:float = 0
 func _ready() -> void:
 	#run setup
 	page_setup()
-	#adjusting the back button image
-	var img = Image.load_from_file("res://sprites/back button.png")
-	img.resize(img.get_width() * 0.08, img.get_height() * 0.08)
-	var image := Texture2D.new()
-	image = ImageTexture.create_from_image(img)
-	image.update(img)
-	shop_page_button.texture = image
-
-	#adjusting the checkout button image
-	var img2 = Image.load_from_file("res://sprites/dollar button.jpg")
-	img2.resize(img2.get_width() * 0.09, img2.get_height() * 0.09)
-	var image2 := Texture2D.new()
-	image2 = ImageTexture.create_from_image(img2)
-	image2.update(img2)
-	cart_check_out_button.texture = image2
 
 	#adjusting the background image
 	var img3 = Image.load_from_file("res://sprites/white background.jpg")

@@ -25,7 +25,7 @@ func _ready() -> void:
 	if current_product:
 		#adjusting the product image
 		var img = Image.load_from_file(current_product.product_icon)
-		img.resize(img.get_width() * 0.5, img.get_height() * 0.5)
+		img.resize(img.get_width() * 1, img.get_height() * 1)
 		var image := Texture2D.new()
 		image = ImageTexture.create_from_image(img)
 		image.update(img)

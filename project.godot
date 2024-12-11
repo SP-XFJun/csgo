@@ -29,7 +29,6 @@ file_logging/max_log_files=3
 
 window/size/extend_to_title=true
 window/stretch/mode="viewport"
-window/stretch/aspect="expand"
 
 [editor]
 
