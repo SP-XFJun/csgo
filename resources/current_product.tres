@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Product" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://scripts/product_resource.gd" id="1_wpowa"]
+[ext_resource type="Script" path="res://scripts/product_resource.gd" id="1_eqjuf"]
 
 [resource]
-script = ExtResource("1_wpowa")
-product_name = "Lettuce"
-product_icon = "res://sprites/product/lettuce.png"
-product_price = 3.95
+script = ExtResource("1_eqjuf")
+product_name = "Orange"
+product_icon = "res://sprites/product/orange.png"
+product_price = 3.99
 product_amount = 0
