@@ -23,7 +23,6 @@ ScriptManager="*res://scripts/script_manager.gd"
 
 window/size/extend_to_title=true
 window/stretch/mode="viewport"
-window/stretch/aspect="expand"
 
 [editor]
 
