@@ -5,10 +5,6 @@ extends Node2D
 @onready var shop_page_button: TextureRect = $"Control/Shop Page Button"
 @onready var cart_check_out_button: TextureRect = $"Control/Cart Check Out Button"
 
-@export var product_name:String
-@export var product_icon:String
-@export var product_price:float
-
 var total_cost:float = 0
 
 func _ready() -> void:

@@ -3,21 +3,18 @@ extends TextureRect
 #code for accessing product on the shop page
 
 @export var product_name:String
-@export var product_icon:String
+@export var product_icon:Texture2D
 @export var product_price:float
 
 var wait_time:float = 0
 
 func _ready() -> void:
-	#product setup
+	#run setup
 	gui_input.connect(_on_input)
-	#adjusting the product image
-	var img = Image.load_from_file(product_icon)
-	img.resize(img.get_width() * 0.5, img.get_height() * 0.5)
-	var image := Texture2D.new()
-	image = ImageTexture.create_from_image(img)
-	image.update(img)
-	texture = image
+	
+func product_setup():
+	#product setup
+	texture = product_icon
 
 func _process(delta: float) -> void:
 	#manually decreasing mouse click interval
