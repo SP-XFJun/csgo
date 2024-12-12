@@ -18,8 +18,10 @@ func page_setup() -> void:
 	for i in range(min(ScriptManager.cart.size() + 1,30)):
 		if (i == ScriptManager.cart.size()):
 			product_list.get_child(floor(i / 5)).get_child(i % 5).product = {}
+			product_list.get_child(floor(i / 5)).get_child(i % 5).action.visible = false
 		else:
 			product_list.get_child(floor(i / 5)).get_child(i % 5).product = ScriptManager.cart[i]
+			product_list.get_child(floor(i / 5)).get_child(i % 5).action.visible = false
 			total_cost += ScriptManager.cart[i]["amount"] * ScriptManager.cart[i]["price"]
 		print("product" + str(i) + ":" + str(product_list.get_child(floor(i / 5)).get_child(i % 5).product))
 	ScriptManager.total_cost = total_cost

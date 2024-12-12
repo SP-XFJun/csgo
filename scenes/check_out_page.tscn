@@ -74,6 +74,8 @@ text = "Check Out"
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "[wave amp=20 freq=2][outline_size=10] num"

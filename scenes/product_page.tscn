@@ -7,6 +7,7 @@
 [sub_resource type="SystemFont" id="SystemFont_ynsw5"]
 
 [sub_resource type="SystemFont" id="SystemFont_0kyff"]
+subpixel_positioning = 0
 
 [node name="Product Page" type="Node2D"]
 script = ExtResource("1_fu36u")
@@ -84,6 +85,8 @@ text = "-1"
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = SubResource("SystemFont_0kyff")
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
