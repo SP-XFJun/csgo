@@ -31,5 +31,10 @@ func _on_input(event: InputEvent):
 		load_product.product_name = product_name
 		load_product.product_icon = product_icon
 		load_product.product_price = product_price
-		ResourceSaver.save(load_product, "res://resources/current_product.tres")
+		var dir = DirAccess.open("user://resources")
+		if dir == null:
+			dir = DirAccess.open("user://")
+			if dir != null:
+				dir.make_dir_recursive("resources")
+		ResourceSaver.save(load_product, "user://resources/current_product.tres")
 		get_tree().change_scene_to_file("res://scenes/product_page.tscn")

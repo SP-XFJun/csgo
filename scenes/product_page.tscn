@@ -1,10 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://1lcsomb4o70n"]
+[gd_scene load_steps=6 format=3 uid="uid://1lcsomb4o70n"]
 
 [ext_resource type="Script" path="res://scripts/product_page.gd" id="1_fu36u"]
 [ext_resource type="Texture2D" uid="uid://cbs33q5bkncpq" path="res://icon.svg" id="2_1u15u"]
 [ext_resource type="Texture2D" uid="uid://b2wifsvg33c63" path="res://sprites/white background.jpg" id="2_meuuj"]
 
 [sub_resource type="SystemFont" id="SystemFont_ynsw5"]
+
+[sub_resource type="SystemFont" id="SystemFont_0kyff"]
 
 [node name="Product Page" type="Node2D"]
 script = ExtResource("1_fu36u")
@@ -33,9 +35,10 @@ offset_bottom = 600.0
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/HBoxContainer"]
+[node name="Product Icon" type="TextureRect" parent="Control/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("2_1u15u")
+stretch_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -81,9 +84,10 @@ text = "-1"
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_fonts/normal_font = SubResource("SystemFont_0kyff")
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
-text = "[center][wave amp=20 freq=2]num"
+text = "[center][wave amp=20 freq=2][outline_size=10]num"
 scroll_active = false
 
 [node name="add" type="Button" parent="Control/VBoxContainer/HBoxContainer2"]

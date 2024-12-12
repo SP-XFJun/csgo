@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://7ge2evxy3b00" path="res://sprites/product/empty_slot.png" id="1_rs775"]
 [ext_resource type="Script" path="res://scripts/cart_slot.gd" id="2_ox7i8"]
 
-[node name="Slot1" type="TextureRect"]
+[node name="Cart Slot" type="TextureRect"]
 offset_left = -64.0
 offset_top = -128.0
 offset_right = 64.0

@@ -76,7 +76,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
-text = "[center][wave amp=20 freq=2]num"
+text = "[wave amp=20 freq=2][outline_size=10] num"
 scroll_active = false
 
 [node name="Return Button" type="Button" parent="Control/VBoxContainer/HBoxContainer2"]

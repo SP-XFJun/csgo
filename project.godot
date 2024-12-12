@@ -22,7 +22,6 @@ ScriptManager="*res://scripts/script_manager.gd"
 [debug]
 
 file_logging/enable_file_logging=true
-file_logging/log_path="user://downloads/logs/godot.log"
 file_logging/max_log_files=3
 
 [display]

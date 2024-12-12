@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var product_icon: TextureRect = $Control/VBoxContainer/HBoxContainer/TextureRect
+@onready var product_icon: TextureRect = $"Control/VBoxContainer/HBoxContainer/Product Icon"
 @onready var product_name: RichTextLabel = $"Control/VBoxContainer/HBoxContainer/VBoxContainer/Product Name"
 @onready var product_price: RichTextLabel = $Control/VBoxContainer/HBoxContainer/VBoxContainer/Price
 @onready var background: Sprite2D = $"Background"
@@ -21,11 +21,10 @@ func _ready() -> void:
 	add_cart.pressed.connect(_add_cart)
 	remove.pressed.connect(_remove)
 	add.pressed.connect(_add)
-	var current_product = load("res://resources/current_product.tres")
+	var current_product = load("user://resources/current_product.tres")
 	if current_product:
-		product_icon.texture = current_product.product_icon
-		
 		product_name.text = current_product.product_name
+		product_icon.texture = current_product.product_icon
 		product_price.text = "$" + str(current_product.product_price)
 		price = current_product.product_price
 
@@ -35,7 +34,7 @@ func _process(delta: float) -> void:
 
 func _add_cart():
 	#add the current product to the cart
-	var product = load("res://resources/current_product.tres")
+	var product = load("user://resources/current_product.tres")
 	product_info["name"] = product.product_name
 	product_info["icon"] = product.product_icon
 	product_info["price"] = product.product_price
