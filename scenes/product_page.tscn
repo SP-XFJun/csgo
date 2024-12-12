@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://1lcsomb4o70n"]
+[gd_scene load_steps=5 format=3 uid="uid://1lcsomb4o70n"]
 
 [ext_resource type="Script" path="res://scripts/product_page.gd" id="1_fu36u"]
 [ext_resource type="Texture2D" uid="uid://cbs33q5bkncpq" path="res://icon.svg" id="2_1u15u"]
+[ext_resource type="Texture2D" uid="uid://b2wifsvg33c63" path="res://sprites/white background.jpg" id="2_meuuj"]
 
 [sub_resource type="SystemFont" id="SystemFont_ynsw5"]
 
@@ -9,7 +10,9 @@
 script = ExtResource("1_fu36u")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(576, 323)
+position = Vector2(677, 302)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_meuuj")
 region_enabled = true
 region_rect = Rect2(0, 0, 4608, 2592)
 
@@ -95,6 +98,8 @@ layout_direction = 3
 layout_mode = 2
 size_flags_horizontal = 10
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0.117647, 0.117647, 0.117647, 1)
+theme_override_colors/icon_hover_color = Color(0.0579963, 0.0579963, 0.0579963, 1)
 theme_override_font_sizes/font_size = 30
 text = "Return"
 flat = true

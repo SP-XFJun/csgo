@@ -23,21 +23,7 @@ func _ready() -> void:
 	add.pressed.connect(_add)
 	var current_product = load("res://resources/current_product.tres")
 	if current_product:
-		#adjusting the product image
-		var img = Image.load_from_file(current_product.product_icon)
-		img.resize(img.get_width() * 1, img.get_height() * 1)
-		var image := Texture2D.new()
-		image = ImageTexture.create_from_image(img)
-		image.update(img)
-		product_icon.texture = image
-		
-		#adjusting the background image
-		var img2 = Image.load_from_file("res://sprites/white background.jpg")
-		img2.resize(img2.get_width() * 1.5, img2.get_height() * 1.5)
-		var image2 := Texture2D.new()
-		image2 = ImageTexture.create_from_image(img2)
-		image2.update(img2)
-		background.texture = image2
+		product_icon.texture = current_product.product_icon
 		
 		product_name.text = current_product.product_name
 		product_price.text = "$" + str(current_product.product_price)

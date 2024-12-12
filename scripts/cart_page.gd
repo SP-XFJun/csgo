@@ -11,14 +11,6 @@ func _ready() -> void:
 	#run setup
 	page_setup()
 
-	#adjusting the background image
-	var img3 = Image.load_from_file("res://sprites/white background.jpg")
-	img3.resize(img3.get_width() * 1.5, img3.get_height() * 1.5)
-	var image3 := Texture2D.new()
-	image3 = ImageTexture.create_from_image(img3)
-	image3.update(img3)
-	background.texture = image3
-
 func page_setup() -> void:
 	#cart page setup
 	total_cost = 0

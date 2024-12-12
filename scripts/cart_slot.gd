@@ -19,23 +19,13 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	#continually updating the product icon
 	if !product.is_empty():
-		var img = Image.load_from_file(product["icon"])
-		img.resize(img.get_width() * 1, img.get_height() * 1)
-		var image := Texture2D.new()
-		image = ImageTexture.create_from_image(img)
-		image.update(img)
-		texture = image
+		texture = product["icon"]
 		
 		label.text = "[wave amp=10 freq=2]Quantity:" + str(product["amount"])
 	else:
-		#adjusting the empty slot image
-		var img = Image.load_from_file("res://sprites/product/empty_slot.png")
-		img.resize(img.get_width() * 1, img.get_height() * 1)
-		var image := Texture2D.new()
-		image = ImageTexture.create_from_image(img)
-		image.update(img)
-		texture = image
-		label.text = ""
+		if texture != preload("res://sprites/product/empty_slot.png"):
+			texture = preload("res://sprites/product/empty_slot.png")
+			label.text = ""
 	#manually decreasing mouse click interval
 	if wait_time > 0:
 		wait_time -= delta
