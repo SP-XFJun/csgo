@@ -16,8 +16,3 @@ func add_product(product:Dictionary):
 			cart.append(product)
 	else:
 		print("cart is full")
-
-func remove_product(product:Resource):
-	#remove product from cart
-	if cart.find(product) != -1:
-		cart.remove_at(cart.find(product))

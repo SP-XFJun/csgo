@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="UserDatabase" load_steps=2 format=3 uid="uid://7xxqewapwujq"]
+
+[ext_resource type="Script" path="res://scripts/user_resource.gd" id="1_s0heh"]
+
+[resource]
+script = ExtResource("1_s0heh")
+user_list = []

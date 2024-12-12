@@ -13,11 +13,11 @@ subpixel_positioning = 0
 script = ExtResource("1_fu36u")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(677, 302)
-scale = Vector2(0.75, 0.75)
+position = Vector2(624, 208)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_meuuj")
 region_enabled = true
-region_rect = Rect2(0, 0, 4608, 2592)
+region_rect = Rect2(0, 0, 3000, 2000)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
