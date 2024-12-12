@@ -1,0 +1,317 @@
+[gd_scene load_steps=7 format=3 uid="uid://drk2dup4orc8"]
+
+[ext_resource type="Script" path="res://scripts/shop_page.gd" id="1_ik87o"]
+[ext_resource type="Texture2D" uid="uid://b2wifsvg33c63" path="res://sprites/white background.jpg" id="2_dwhcj"]
+[ext_resource type="Texture2D" uid="uid://cbs33q5bkncpq" path="res://icon.svg" id="2_hjlgs"]
+[ext_resource type="Script" path="res://scripts/product.gd" id="3_b2ay2"]
+[ext_resource type="Texture2D" uid="uid://y5pokuktsjac" path="res://sprites/cart button.png" id="3_dbktf"]
+[ext_resource type="Script" path="res://scripts/shop_cart_switch_button.gd" id="4_mhrgi"]
+
+[node name="Shop Page" type="Node2D"]
+script = ExtResource("1_ik87o")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(624, 208)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_dwhcj")
+region_enabled = true
+region_rect = Rect2(0, 0, 3000, 2000)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Cart Page Button" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 552.0
+offset_right = 656.0
+offset_bottom = 676.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_dbktf")
+script = ExtResource("4_mhrgi")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 108.0
+offset_right = 1092.0
+offset_bottom = 544.0
+
+[node name="Product List" type="VBoxContainer" parent="Control/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/ScrollContainer/Product List"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Water"
+product_price = 10.5
+
+[node name="TextureRect2" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Banana"
+product_price = 3.75
+
+[node name="TextureRect3" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Lettuce"
+product_price = 3.95
+
+[node name="TextureRect4" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Orange"
+product_price = 3.99
+
+[node name="TextureRect8" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Carrot"
+product_price = 6.99
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/ScrollContainer/Product List"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="TextureRect7" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Kiwi"
+product_price = 7.99
+
+[node name="TextureRect" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Peach"
+product_price = 13.75
+
+[node name="TextureRect2" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Lemon"
+product_price = 7.5
+
+[node name="TextureRect10" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Broccoli"
+product_price = 12.95
+
+[node name="TextureRect9" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Tomato"
+product_price = 4.7
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control/ScrollContainer/Product List"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="TextureRect8" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Ketchup"
+product_price = 15.5
+
+[node name="TextureRect7" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Potato"
+product_price = 4.25
+
+[node name="TextureRect4" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Cucumber"
+product_price = 5.8
+
+[node name="TextureRect3" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Corn"
+product_price = 10.5
+
+[node name="TextureRect10" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Mushroom"
+product_price = 9.99
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Control/ScrollContainer/Product List"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="TextureRect9" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Apple"
+product_price = 5.99
+
+[node name="TextureRect8" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Apple iPhone 12 256 GB"
+product_price = 1299.99
+
+[node name="TextureRect7" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Onion"
+product_price = 4.5
+
+[node name="TextureRect12" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Chicken"
+product_price = 18.9
+
+[node name="TextureRect11" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Beef"
+product_price = 33.5
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Control/ScrollContainer/Product List"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="TextureRect10" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer5"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Milk"
+product_price = 14.99
+
+[node name="TextureRect9" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer5"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Yogurt"
+product_price = 6.99
+
+[node name="TextureRect8" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer5"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Shopping Bag"
+product_price = 7.5
+
+[node name="TextureRect7" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer5"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Shampoo"
+product_price = 21.99
+
+[node name="TextureRect" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer5"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Pen"
+product_price = 9.99
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Control/ScrollContainer/Product List"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="TextureRect2" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer6"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Eraser"
+product_price = 1.5
+
+[node name="TextureRect3" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer6"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Desk Lamp"
+product_price = 14.99
+
+[node name="TextureRect4" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer6"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Xiaomi Redmi 14C Dual SIM"
+product_price = 479.99
+
+[node name="TextureRect5" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer6"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "Asus ROG Azoth Extreme RGB Gaming Keyboard"
+product_price = 2149.99
+
+[node name="TextureRect6" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer6"]
+layout_mode = 2
+texture = ExtResource("2_hjlgs")
+stretch_mode = 2
+script = ExtResource("3_b2ay2")
+product_name = "CSGO Shanghai Major Pass"
+product_price = 69.99

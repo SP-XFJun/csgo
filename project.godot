@@ -11,13 +11,19 @@ config_version=5
 [application]
 
 config/name="Grocery Delivery"
-run/main_scene="res://scenes/shop_page.tscn"
+run/main_scene="res://scenes/login_page.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 ScriptManager="*res://scripts/script_manager.gd"
+
+[debug]
+
+file_logging/enable_file_logging=true
+file_logging/log_path="user://SSH Logs/logs/godot.log"
+file_logging/max_log_files=3
 
 [display]
 

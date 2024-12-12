@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://k2agb5bg24m3"]
+
+[ext_resource type="Texture2D" uid="uid://7ge2evxy3b00" path="res://sprites/product/empty_slot.png" id="1_rs775"]
+[ext_resource type="Script" path="res://scripts/cart_slot.gd" id="2_ox7i8"]
+
+[node name="Cart Slot" type="TextureRect"]
+offset_left = -64.0
+offset_top = -128.0
+offset_right = 64.0
+texture = ExtResource("1_rs775")
+script = ExtResource("2_ox7i8")
+
+[node name="Label" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_top = 128.0
+offset_right = 128.0
+offset_bottom = 160.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+
+[node name="Action" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_top = 80.0
+offset_right = 128.0
+offset_bottom = 112.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
