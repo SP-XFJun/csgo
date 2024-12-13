@@ -20,7 +20,7 @@ func _ready() -> void:
 
 func _check_out():
 	#when user pays the bill, will be worked on
-	pass
+	print("User " + ScriptManager.user["name"] + " is trying to checkout with product list: " + str(ScriptManager.cart))
 
 func _returned():
 	#when return button is clicked
