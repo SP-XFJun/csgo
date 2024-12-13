@@ -16,4 +16,4 @@ func add_product(product:Dictionary):
 		if !found:
 			cart.append(product)
 	else:
-		print("cart is full")
+		print("The cart is full")

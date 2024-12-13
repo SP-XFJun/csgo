@@ -27,7 +27,10 @@ func _login():
 	user["password"] = password.text
 	if user_list.find_user(user):
 		ScriptManager.user = user
+		print("An user logged in as: " + user["name"])
 		get_tree().change_scene_to_file("res://scenes/shop_page.tscn")
+	else:
+		print("An user failed to log in.")
 
 func _register():
 	#when register button is clicked
@@ -39,6 +42,9 @@ func _register():
 	new_user["password"] = password.text
 	if user_list.add_user(new_user):
 		ResourceSaver.save(user_list, "user://resources/user.tres")
+		print("Registered username " + new_user["name"] + " into the database.")
 		#remove username and password from text
 		username.text = ""
 		password.text = ""
+	else:
+		print("An user failed when tried to register as the name: " + new_user["name"] + ".")

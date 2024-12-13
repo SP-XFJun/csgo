@@ -42,6 +42,7 @@ func _add_cart():
 	#reset order_count for action feedback
 	order_count = 1
 	ScriptManager.add_product(product_info.duplicate(true))
+	print("User " + ScriptManager.user["name"] + " purchased " + str(product_info["amount"]) + " " + product_info["name"])
 
 func _remove():
 	#reducing order count by 1

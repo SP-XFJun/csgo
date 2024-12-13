@@ -35,4 +35,5 @@ func _on_input(event: InputEvent):
 		if dir != null:
 			dir.make_dir_recursive("user://resources")
 		ResourceSaver.save(load_product, "user://resources/current_product.tres")
+		print("User " + ScriptManager.user["name"] + " is looking at product: " + load_product.product_name)
 		get_tree().change_scene_to_file("res://scenes/product_page.tscn")

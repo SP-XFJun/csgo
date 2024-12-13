@@ -53,6 +53,6 @@ func _on_action_input(event: InputEvent):
 		#clearing the slot and its relevant data from other nodes
 		action.visible = false
 		ScriptManager.cart.remove_at(slot_index)
+		print("User " + ScriptManager.user["name"] + " removed the product: " + str(product))
 		product.clear()
 		get_tree().get_first_node_in_group("Cart Page").page_setup()
-		print("script_cart: " + str(ScriptManager.cart))

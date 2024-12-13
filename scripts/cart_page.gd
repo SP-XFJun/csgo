@@ -23,5 +23,4 @@ func page_setup() -> void:
 			product_list.get_child(floor(i / 5)).get_child(i % 5).product = ScriptManager.cart[i]
 			product_list.get_child(floor(i / 5)).get_child(i % 5).action.visible = false
 			total_cost += ScriptManager.cart[i]["amount"] * ScriptManager.cart[i]["price"]
-		print("product" + str(i) + ":" + str(product_list.get_child(floor(i / 5)).get_child(i % 5).product))
 	ScriptManager.total_cost = total_cost
