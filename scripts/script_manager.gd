@@ -2,6 +2,7 @@ extends Node
 
 var cart:Array = []
 var total_cost:float = 0
+var user
 
 func add_product(product:Dictionary):
 	#add product to cart

@@ -64,7 +64,7 @@ var shop_product: Array = [{"name": "Water", "icon": WATER, "price": 10.5},
 	{"name": "Eraser", "icon": ERASER, "price": 1.5},
 	{"name": "Desk Lamp", "icon": DESK_LAMP, "price": 14.99},
 	{"name": "Xiaomi Redmi 14c Dual Sim", "icon": XIAOMI, "price": 479.99},
-	{"name": "Asus Rog Azoth Extreme Rgb Gaming Keyboard", "icon": KEYBOARD, "price": 2149.99},
+	{"name": "Asus Rog Azoth Extreme RGB Gaming Keyboard", "icon": KEYBOARD, "price": 2149.99},
 	{"name": "Csgo Shanghai Major Pass", "icon": CSGO_PASS, "price": 69.99}
 ]
 

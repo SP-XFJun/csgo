@@ -1,12 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://bvdjnhkhlqavv"]
+[gd_scene load_steps=8 format=3 uid="uid://6u88soyhg73o"]
 
 [ext_resource type="Script" path="res://scripts/cart_page.gd" id="1_lfnaq"]
 [ext_resource type="Texture2D" uid="uid://dice7ud2nhtqc" path="res://sprites/shop button.png" id="2_pih7l"]
 [ext_resource type="Texture2D" uid="uid://b2wifsvg33c63" path="res://sprites/white background.jpg" id="2_s5544"]
-[ext_resource type="PackedScene" uid="uid://cmsjwvr4yqe22" path="res://scenes/cart_slot.tscn" id="3_2rham"]
-[ext_resource type="Script" path="res://scripts/shop_cart_switch_button.gd" id="4_0oxxw"]
+[ext_resource type="PackedScene" uid="uid://k2agb5bg24m3" path="res://scenes/cart_slot.tscn" id="3_2rham"]
+[ext_resource type="Script" path="res://scripts/shop_cart_switch_button.gd" id="4_fx1n2"]
 [ext_resource type="Texture2D" uid="uid://clnri72oucylf" path="res://sprites/checkout button.png" id="4_icl4v"]
-[ext_resource type="Script" path="res://scripts/cart_check_out_button.gd" id="6_3joeu"]
+[ext_resource type="Script" path="res://scripts/cart_check_out_button.gd" id="6_eunkh"]
 
 [node name="Cart Page" type="Node2D" groups=["Cart Page"]]
 script = ExtResource("1_lfnaq")
@@ -32,7 +32,7 @@ offset_right = 136.0
 offset_bottom = 680.0
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_pih7l")
-script = ExtResource("4_0oxxw")
+script = ExtResource("4_fx1n2")
 
 [node name="Cart Check Out Button" type="TextureRect" parent="Control"]
 layout_mode = 0
@@ -42,7 +42,7 @@ offset_right = 1140.0
 offset_bottom = 1164.0
 scale = Vector2(0.155, 0.155)
 texture = ExtResource("4_icl4v")
-script = ExtResource("6_3joeu")
+script = ExtResource("6_eunkh")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Control"]
 layout_mode = 0
