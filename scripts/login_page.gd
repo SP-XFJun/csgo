@@ -18,8 +18,16 @@ func _ready() -> void:
 		ResourceSaver.save(load("res://resources/user_database.tres"), "user://resources/user.tres")
 
 func _login():
-	#when user pays the bill, will be worked on
-	get_tree().change_scene_to_file("res://scenes/shop_page.tscn")
+	#when login button is clicked
+	if username.text == "" or password.text == "":
+		return
+	var user_list = load("user://resources/user.tres")
+	var user = {}
+	user["name"] = username.text
+	user["password"] = password.text
+	if user_list.find_user(user):
+		ScriptManager.user = user
+		get_tree().change_scene_to_file("res://scenes/shop_page.tscn")
 
 func _register():
 	#when register button is clicked
@@ -31,3 +39,6 @@ func _register():
 	new_user["password"] = password.text
 	if user_list.add_user(new_user):
 		ResourceSaver.save(user_list, "user://resources/user.tres")
+		#remove username and password from text
+		username.text = ""
+		password.text = ""
