@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="CartDatabase" load_steps=2 format=3 uid="uid://dtk78qn2t3wi2"]
+
+[ext_resource type="Script" path="res://scripts/group_resource.gd" id="1_htvtt"]
+
+[resource]
+script = ExtResource("1_htvtt")
+cart_list = []

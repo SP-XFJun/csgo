@@ -9,7 +9,17 @@ var total_cost:float = 0
 
 func _ready() -> void:
 	#run setup
+	ScriptManager.update_cart()
 	page_setup()
+
+func _process(delta: float) -> void:
+	var group_list = ResourceLoader.load("user://resources/group.tres", "", ResourceLoader.CACHE_MODE_IGNORE_DEEP)
+	if group_list:
+		if ScriptManager.cart != group_list.group_list[group_list.find_group(ScriptManager.group) - 1]["cart"]:
+			ScriptManager.update_cart()
+			page_setup()
+	#performance booster
+	await get_tree().create_timer(0.5).timeout
 
 func page_setup() -> void:
 	#cart page setup
@@ -22,5 +32,6 @@ func page_setup() -> void:
 		else:
 			product_list.get_child(floor(i / 5)).get_child(i % 5).product = ScriptManager.cart[i]
 			product_list.get_child(floor(i / 5)).get_child(i % 5).action.visible = false
-			total_cost += ScriptManager.cart[i]["amount"] * ScriptManager.cart[i]["price"]
+			if ScriptManager.cart[i]["member"] == ScriptManager.user["name"]:
+				total_cost += ScriptManager.cart[i]["amount"] * ScriptManager.cart[i]["price"]
 	ScriptManager.total_cost = total_cost

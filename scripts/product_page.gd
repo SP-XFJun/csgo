@@ -24,7 +24,7 @@ func _ready() -> void:
 	var current_product = load("user://resources/current_product.tres")
 	if current_product:
 		product_name.text = current_product.product_name
-		product_icon.texture = current_product.product_icon
+		product_icon.texture = load(current_product.product_icon)
 		product_price.text = "$" + str(current_product.product_price)
 		price = current_product.product_price
 
@@ -39,9 +39,13 @@ func _add_cart():
 	product_info["icon"] = product.product_icon
 	product_info["price"] = product.product_price
 	product_info["amount"] = order_count
+	product_info["member"] = ScriptManager.user["name"]
 	#reset order_count for action feedback
 	order_count = 1
+	var group_list = ResourceLoader.load("user://resources/group.tres", "", ResourceLoader.CACHE_MODE_IGNORE_DEEP)
+	ScriptManager.update_cart()
 	ScriptManager.add_product(product_info.duplicate(true))
+	group_list.update_cart(ScriptManager.group,ScriptManager.cart)
 	print("User " + ScriptManager.user["name"] + " purchased " + str(product_info["amount"]) + " " + product_info["name"])
 
 func _remove():

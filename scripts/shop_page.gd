@@ -4,68 +4,39 @@ extends Node2D
 
 @onready var background: Sprite2D = $Background
 @onready var cart_page_button: TextureRect = $"Control/Cart Page Button"
+
 #Predefined shop product
-const APPLE = preload("res://sprites/product/apple.png")
-const BANANA = preload("res://sprites/product/banana.png")
-const BEEF = preload("res://sprites/product/beef.png")
-const BROCCOLI = preload("res://sprites/product/broccoli.png")
-const CARROT = preload("res://sprites/product/carrot.png")
-const CHICKEN = preload("res://sprites/product/chicken.png")
-const CORN = preload("res://sprites/product/corn.png")
-const CSGO_PASS = preload("res://sprites/product/csgo_pass.png")
-const CUCUMBER = preload("res://sprites/product/cucumber.png")
-const DESK_LAMP = preload("res://sprites/product/desk_lamp.png")
-const EMPTY_SLOT = preload("res://sprites/product/empty_slot.png")
-const ERASER = preload("res://sprites/product/eraser.png")
-const IPHONE = preload("res://sprites/product/iphone.png")
-const KETCHUP = preload("res://sprites/product/ketchup.png")
-const KEYBOARD = preload("res://sprites/product/keyboard.png")
-const KIWI = preload("res://sprites/product/kiwi.png")
-const LEMON = preload("res://sprites/product/lemon.png")
-const LETTUCE = preload("res://sprites/product/lettuce.png")
-const MILK = preload("res://sprites/product/milk.png")
-const MUSHROOM = preload("res://sprites/product/mushroom.png")
-const ONION = preload("res://sprites/product/onion.png")
-const ORANGE = preload("res://sprites/product/orange.png")
-const PEACH = preload("res://sprites/product/peach.png")
-const PEN = preload("res://sprites/product/pen.png")
-const POTATO = preload("res://sprites/product/potato.png")
-const SHAMPOO = preload("res://sprites/product/shampoo.png")
-const SHOPPING_BAG = preload("res://sprites/product/shopping_bag.png")
-const TOMATO = preload("res://sprites/product/tomato.png")
-const WATER = preload("res://sprites/product/water.png")
-const XIAOMI = preload("res://sprites/product/xiaomi.png")
-const YOGURT = preload("res://sprites/product/yogurt.png")
-var shop_product: Array = [{"name": "Water", "icon": WATER, "price": 10.5},
-	{"name": "Banana", "icon": BANANA, "price": 3.75},
-	{"name": "Lettuce", "icon": LETTUCE, "price": 3.95},
-	{"name": "Orange", "icon": ORANGE, "price": 3.99},
-	{"name": "Carrot", "icon": CARROT, "price": 6.99},
-	{"name": "Kiwi", "icon": KIWI, "price": 7.99},
-	{"name": "Peach", "icon": PEACH, "price": 13.75},
-	{"name": "Lemon", "icon": LEMON, "price": 7.5},
-	{"name": "Broccoli", "icon": BROCCOLI, "price": 12.95},
-	{"name": "Tomato", "icon": TOMATO, "price": 4.7},
-	{"name": "Ketchup", "icon": KETCHUP, "price": 15.5},
-	{"name": "Potato", "icon": POTATO, "price": 4.25},
-	{"name": "Cucumber", "icon": CUCUMBER, "price": 5.8},
-	{"name": "Corn", "icon": CORN, "price": 10.5},
-	{"name": "Mushroom", "icon": MUSHROOM, "price": 9.99},
-	{"name": "Apple", "icon": APPLE, "price": 5.99},
-	{"name": "Apple IPhone 12 256 GB", "icon": IPHONE, "price": 1299.99},
-	{"name": "Onion", "icon": ONION, "price": 4.5},
-	{"name": "Chicken", "icon": CHICKEN, "price": 18.9},
-	{"name": "Beef", "icon": BEEF, "price": 33.5},
-	{"name": "Milk", "icon": MILK, "price": 14.99},
-	{"name": "Yogurt", "icon": YOGURT, "price": 6.99},
-	{"name": "Shopping Bag", "icon": SHOPPING_BAG, "price": 7.5},
-	{"name": "Shampoo", "icon": SHAMPOO, "price": 21.99},
-	{"name": "Pen", "icon": PEN, "price": 9.99},
-	{"name": "Eraser", "icon": ERASER, "price": 1.5},
-	{"name": "Desk Lamp", "icon": DESK_LAMP, "price": 14.99},
-	{"name": "Xiaomi Redmi 14c Dual Sim", "icon": XIAOMI, "price": 479.99},
-	{"name": "Asus Rog Azoth Extreme RGB Gaming Keyboard", "icon": KEYBOARD, "price": 2149.99},
-	{"name": "Csgo Shanghai Major Pass", "icon": CSGO_PASS, "price": 69.99}
+var shop_product: Array = [
+	{"name": "Water", "icon": "res://sprites/product/water.png", "price": 10.5},
+	{"name": "Banana", "icon": "res://sprites/product/banana.png", "price": 3.75},
+	{"name": "Lettuce", "icon": "res://sprites/product/lettuce.png", "price": 3.95},
+	{"name": "Orange", "icon": "res://sprites/product/orange.png", "price": 3.99},
+	{"name": "Carrot", "icon": "res://sprites/product/carrot.png", "price": 6.99},
+	{"name": "Kiwi", "icon": "res://sprites/product/kiwi.png", "price": 7.99},
+	{"name": "Peach", "icon": "res://sprites/product/peach.png", "price": 13.75},
+	{"name": "Lemon", "icon": "res://sprites/product/lemon.png", "price": 7.5},
+	{"name": "Broccoli", "icon": "res://sprites/product/broccoli.png", "price": 12.95},
+	{"name": "Tomato", "icon": "res://sprites/product/tomato.png", "price": 4.7},
+	{"name": "Ketchup", "icon": "res://sprites/product/ketchup.png", "price": 15.5},
+	{"name": "Potato", "icon": "res://sprites/product/potato.png", "price": 4.25},
+	{"name": "Cucumber", "icon": "res://sprites/product/cucumber.png", "price": 5.8},
+	{"name": "Corn", "icon": "res://sprites/product/corn.png", "price": 10.5},
+	{"name": "Mushroom", "icon": "res://sprites/product/mushroom.png", "price": 9.99},
+	{"name": "Apple", "icon": "res://sprites/product/apple.png", "price": 5.99},
+	{"name": "Apple IPhone 12 256 GB", "icon": "res://sprites/product/iphone.png", "price": 1299.99},
+	{"name": "Onion", "icon": "res://sprites/product/onion.png", "price": 4.5},
+	{"name": "Chicken", "icon": "res://sprites/product/chicken.png", "price": 18.9},
+	{"name": "Beef", "icon": "res://sprites/product/beef.png", "price": 33.5},
+	{"name": "Milk", "icon": "res://sprites/product/milk.png", "price": 14.99},
+	{"name": "Yogurt", "icon": "res://sprites/product/yogurt.png", "price": 6.99},
+	{"name": "Shopping Bag", "icon": "res://sprites/product/shopping_bag.png", "price": 7.5},
+	{"name": "Shampoo", "icon": "res://sprites/product/shampoo.png", "price": 21.99},
+	{"name": "Pen", "icon": "res://sprites/product/pen.png", "price": 9.99},
+	{"name": "Eraser", "icon": "res://sprites/product/eraser.png", "price": 1.5},
+	{"name": "Desk Lamp", "icon": "res://sprites/product/desk_lamp.png", "price": 14.99},
+	{"name": "Xiaomi Redmi 14c Dual Sim", "icon": "res://sprites/product/xiaomi.png", "price": 479.99},
+	{"name": "Asus Rog Azoth Extreme RGB Gaming Keyboard", "icon": "res://sprites/product/keyboard.png", "price": 2149.99},
+	{"name": "Csgo Shanghai Major Pass", "icon": "res://sprites/product/csgo_pass.png", "price": 69.99}
 ]
 
 func _ready() -> void:

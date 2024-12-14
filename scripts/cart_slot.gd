@@ -19,9 +19,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	#continually updating the product icon
 	if !product.is_empty():
-		texture = product["icon"]
-		
-		label.text = "[wave amp=10 freq=2]Quantity:" + str(product["amount"])
+		texture = load(product["icon"])
+		label.text = "[wave amp=10 freq=2]By: " + product["member"] + "\nQuantity: " + str(product["amount"])
 	else:
 		if texture != preload("res://sprites/product/empty_slot.png"):
 			texture = preload("res://sprites/product/empty_slot.png")
@@ -52,7 +51,10 @@ func _on_action_input(event: InputEvent):
 	if event.is_action_released("mouse left click") and action_wait_time > 0:
 		#clearing the slot and its relevant data from other nodes
 		action.visible = false
+		var group_list = ResourceLoader.load("user://resources/group.tres", "", ResourceLoader.CACHE_MODE_IGNORE_DEEP)
+		ScriptManager.update_cart()
 		ScriptManager.cart.remove_at(slot_index)
+		group_list.update_cart(ScriptManager.group,ScriptManager.cart)
 		print("User " + ScriptManager.user["name"] + " removed the product: " + str(product))
 		product.clear()
 		get_tree().get_first_node_in_group("Cart Page").page_setup()

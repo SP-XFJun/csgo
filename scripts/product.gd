@@ -3,7 +3,7 @@ extends TextureRect
 #code for accessing product on the shop page
 
 @export var product_name:String
-@export var product_icon:Texture2D
+@export var product_icon:String
 @export var product_price:float
 
 var wait_time:float = 0
@@ -14,7 +14,7 @@ func _ready() -> void:
 	
 func product_setup():
 	#product setup
-	texture = product_icon
+	texture = load(product_icon)
 
 func _process(delta: float) -> void:
 	#manually decreasing mouse click interval

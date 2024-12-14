@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var login_button: Button = $"Control/VBoxContainer/VBoxContainer/VBoxContainer3/HBoxContainer/Login Button"
 @onready var register_button: Button = $"Control/VBoxContainer/VBoxContainer/VBoxContainer3/HBoxContainer/Register Button"
+@onready var warning: RichTextLabel = $Control/VBoxContainer/VBoxContainer/VBoxContainer3/Warning
 @onready var username: LineEdit = $Control/VBoxContainer/VBoxContainer/VBoxContainer3/Username
 @onready var password: LineEdit = $Control/VBoxContainer/VBoxContainer/VBoxContainer3/Password
 
@@ -9,6 +10,7 @@ func _ready() -> void:
 	#login page setup
 	login_button.pressed.connect(_login)
 	register_button.pressed.connect(_register)
+	warning.text = ""
 	#user database setup
 	var dir = DirAccess.open("user://")
 	if dir != null:
@@ -20,6 +22,7 @@ func _ready() -> void:
 func _login():
 	#when login button is clicked
 	if username.text == "" or password.text == "":
+		warning.text = "[center]Username and password can't be blank."
 		return
 	var user_list = load("user://resources/user.tres")
 	var user = {}
@@ -28,13 +31,15 @@ func _login():
 	if user_list.find_user(user):
 		ScriptManager.user = user
 		print("An user logged in as: " + user["name"])
-		get_tree().change_scene_to_file("res://scenes/shop_page.tscn")
+		get_tree().change_scene_to_file("res://scenes/group_page.tscn")
 	else:
 		print("An user failed to log in.")
+		warning.text = "[center]Your username or password is incorrect."
 
 func _register():
 	#when register button is clicked
 	if username.text == "" or password.text == "":
+		warning.text = "[center]Username and password can't be blank."
 		return
 	var user_list = load("user://resources/user.tres")
 	var new_user = {}
@@ -48,3 +53,4 @@ func _register():
 		password.text = ""
 	else:
 		print("An user failed when tried to register as the name: " + new_user["name"] + ".")
+		warning.text = "[center]This username has been taken."
