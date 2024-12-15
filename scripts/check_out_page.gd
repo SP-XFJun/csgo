@@ -16,7 +16,7 @@ func _ready() -> void:
 	if ScriptManager.total_cost == 0:
 		total_cost.text = "[wave amp=20 freq=2][outline_size=10] $0"
 	else:
-		total_cost.text = "[wave amp=20 freq=2][outline_size=10] $" + str(ScriptManager.total_cost + 5)
+		total_cost.text = "[wave amp=20 freq=2][outline_size=10] $" + str(ScriptManager.total_cost + ScriptManager.delivery_fees)
 
 func _check_out():
 	#when user pays the bill, will be worked on

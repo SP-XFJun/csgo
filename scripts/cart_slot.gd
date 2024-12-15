@@ -9,6 +9,7 @@ var product:Dictionary = {}
 
 var wait_time:float = 0
 var action_wait_time:float = 0
+var able_to_remove:bool = false
 
 func _ready() -> void:
 	#slot setup
@@ -37,18 +38,23 @@ func _on_input(event: InputEvent):
 		wait_time = 0.2 #only continue proccessing and display available actions
 						#if mouse clicked and released within 0.2 seconds
 	if event.is_action_released("mouse left click") and wait_time > 0:
-		action.text = "[center][color=red][outline_size=8]Remove"
 		if action.visible:
 			action.visible = false
 		else:
 			action.visible = true
+			if product["member"] == ScriptManager.user["name"]:
+				able_to_remove = true
+				action.text = "[center][color=red][outline_size=8]Remove"
+			else:
+				able_to_remove = false
+				action.text = "[center][color=gray][outline_size=8]Remove"
 
 func _on_action_input(event: InputEvent):
 	#when action label is being clicked
 	if event.is_action_pressed("mouse left click"):
 		action_wait_time = 0.2	#only continue proccessing the action
 								#if mouse clicked and released within 0.2 seconds
-	if event.is_action_released("mouse left click") and action_wait_time > 0:
+	if event.is_action_released("mouse left click") and action_wait_time > 0 and able_to_remove:
 		#clearing the slot and its relevant data from other nodes
 		action.visible = false
 		var group_list = ResourceLoader.load("user://resources/group.tres", "", ResourceLoader.CACHE_MODE_IGNORE_DEEP)

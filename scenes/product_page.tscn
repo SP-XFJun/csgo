@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://1lcsomb4o70n"]
+[gd_scene load_steps=7 format=3 uid="uid://1lcsomb4o70n"]
 
 [ext_resource type="Script" path="res://scripts/product_page.gd" id="1_fu36u"]
 [ext_resource type="Texture2D" uid="uid://cbs33q5bkncpq" path="res://icon.svg" id="2_1u15u"]
 [ext_resource type="Texture2D" uid="uid://b2wifsvg33c63" path="res://sprites/white background.jpg" id="2_meuuj"]
+[ext_resource type="PackedScene" uid="uid://c02pya481eob1" path="res://scenes/popup.tscn" id="3_a2hxn"]
 
 [sub_resource type="SystemFont" id="SystemFont_ynsw5"]
 
@@ -106,9 +107,13 @@ text = "+1"
 layout_direction = 3
 layout_mode = 2
 size_flags_horizontal = 10
+theme_override_colors/font_hover_pressed_color = Color(0.784314, 0.784314, 0, 1)
+theme_override_colors/font_hover_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_colors/font_pressed_color = Color(0.784314, 0.784314, 0, 1)
+theme_override_colors/font_focus_color = Color(0.314316, 0.314316, 0.314316, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_pressed_color = Color(0.117647, 0.117647, 0.117647, 1)
-theme_override_colors/icon_hover_color = Color(0.0579963, 0.0579963, 0.0579963, 1)
 theme_override_font_sizes/font_size = 30
 text = "Return"
 flat = true
+
+[node name="Popup" parent="." instance=ExtResource("3_a2hxn")]

@@ -6,7 +6,7 @@
 
 [sub_resource type="SystemFont" id="SystemFont_ynsw5"]
 
-[node name="Login Page" type="Node2D"]
+[node name="Group Page" type="Node2D"]
 script = ExtResource("1_n8mm3")
 
 [node name="Page Background" type="Sprite2D" parent="."]
@@ -58,7 +58,6 @@ text = "[center][color=gray][outline_size=20]CSGO"
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = SubResource("SystemFont_ynsw5")
 theme_override_font_sizes/normal_font_size = 25
 bbcode_enabled = true

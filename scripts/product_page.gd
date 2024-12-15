@@ -4,6 +4,7 @@ extends Node2D
 @onready var product_name: RichTextLabel = $"Control/VBoxContainer/HBoxContainer/VBoxContainer/Product Name"
 @onready var product_price: RichTextLabel = $Control/VBoxContainer/HBoxContainer/VBoxContainer/Price
 @onready var background: Sprite2D = $"Background"
+@onready var popup: Node2D = $Popup
 
 @onready var add_cart: Button = $"Control/VBoxContainer/HBoxContainer2/Add Cart"
 @onready var remove: Button = $Control/VBoxContainer/HBoxContainer2/remove
@@ -21,6 +22,7 @@ func _ready() -> void:
 	add_cart.pressed.connect(_add_cart)
 	remove.pressed.connect(_remove)
 	add.pressed.connect(_add)
+	popup.visible = false
 	var current_product = load("user://resources/current_product.tres")
 	if current_product:
 		product_name.text = current_product.product_name
@@ -46,6 +48,7 @@ func _add_cart():
 	ScriptManager.update_cart()
 	ScriptManager.add_product(product_info.duplicate(true))
 	group_list.update_cart(ScriptManager.group,ScriptManager.cart)
+	popup.visible = true
 	print("User " + ScriptManager.user["name"] + " purchased " + str(product_info["amount"]) + " " + product_info["name"])
 
 func _remove():
