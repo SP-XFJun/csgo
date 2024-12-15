@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bxqax48xfuc4e"]
+[gd_scene load_steps=8 format=3 uid="uid://drk2dup4orc8"]
 
 [ext_resource type="Script" path="res://scripts/shop_page.gd" id="1_ik87o"]
 [ext_resource type="Texture2D" uid="uid://b2wifsvg33c63" path="res://sprites/white background.jpg" id="2_dwhcj"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/product.gd" id="3_b2ay2"]
 [ext_resource type="Texture2D" uid="uid://y5pokuktsjac" path="res://sprites/cart button.png" id="3_dbktf"]
 [ext_resource type="Script" path="res://scripts/shop_cart_switch_button.gd" id="4_mhrgi"]
+[ext_resource type="Texture2D" uid="uid://nf5g5dbyecti" path="res://sprites/csgo_logo.png" id="5_3ms7y"]
 
 [node name="Shop Page" type="Node2D"]
 script = ExtResource("1_ik87o")
@@ -32,6 +33,14 @@ offset_bottom = 676.0
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("3_dbktf")
 script = ExtResource("4_mhrgi")
+
+[node name="Software Icon" type="TextureRect" parent="Control"]
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 160.0
+offset_bottom = 160.0
+size_flags_horizontal = 4
+texture = ExtResource("5_3ms7y")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Control"]
 layout_mode = 0

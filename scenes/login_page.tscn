@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://3m6hquweff5r"]
+[gd_scene load_steps=5 format=3 uid="uid://bodjm156si3dh"]
 
 [ext_resource type="Script" path="res://scripts/login_page.gd" id="1_qf6bo"]
 [ext_resource type="Texture2D" uid="uid://b2wifsvg33c63" path="res://sprites/white background.jpg" id="2_5qxxy"]
-[ext_resource type="Texture2D" uid="uid://cbs33q5bkncpq" path="res://icon.svg" id="3_2gw8n"]
+[ext_resource type="Texture2D" uid="uid://nf5g5dbyecti" path="res://sprites/csgo_logo.png" id="3_4rujd"]
 
 [sub_resource type="SystemFont" id="SystemFont_ynsw5"]
 
@@ -32,7 +32,7 @@ offset_bottom = 600.0
 [node name="Software Icon" type="TextureRect" parent="Control/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("3_2gw8n")
+texture = ExtResource("3_4rujd")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer"]
 layout_mode = 2
