@@ -29,6 +29,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
+        
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y unzip
 
       # Exporting the software
       - name: export software
@@ -41,6 +44,9 @@ jobs:
           # relative_project_path: ./
           archive_output: true
 
+      - name: List export directory
+        run: ls -R /home/runner/.local/share/godot/archives/
+        
       # Release and create artifact for the export
       - name: create release
         uses: ncipollo/release-action@v1.14.0
