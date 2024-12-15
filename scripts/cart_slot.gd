@@ -42,7 +42,7 @@ func _on_input(event: InputEvent):
 			action.visible = false
 		else:
 			action.visible = true
-			if product["member"] == ScriptManager.user["name"]:
+			if product["member"] == ScriptManager.user["name"] and !ScriptManager.group["ready"].has(ScriptManager.user["name"]):
 				able_to_remove = true
 				action.text = "[center][color=red][outline_size=8]Remove"
 			else:
@@ -54,7 +54,7 @@ func _on_action_input(event: InputEvent):
 	if event.is_action_pressed("mouse left click"):
 		action_wait_time = 0.2	#only continue proccessing the action
 								#if mouse clicked and released within 0.2 seconds
-	if event.is_action_released("mouse left click") and action_wait_time > 0 and able_to_remove:
+	if event.is_action_released("mouse left click") and action_wait_time > 0 and able_to_remove and !ScriptManager.group["ready"].has(ScriptManager.user["name"]):
 		#clearing the slot and its relevant data from other nodes
 		action.visible = false
 		var group_list = ResourceLoader.load("user://resources/group.tres", "", ResourceLoader.CACHE_MODE_IGNORE_DEEP)

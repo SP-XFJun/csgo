@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var join_button: Button = $"Control/VBoxContainer/VBoxContainer/VBoxContainer3/HBoxContainer/Join Button"
 @onready var create_button: Button = $"Control/VBoxContainer/VBoxContainer/VBoxContainer3/HBoxContainer/Create Button"
+@onready var back_button: Button = $"Control/Back Button"
 @onready var warning: RichTextLabel = $Control/VBoxContainer/VBoxContainer/VBoxContainer3/Warning
 @onready var group_name: LineEdit = $Control/VBoxContainer/VBoxContainer/VBoxContainer3/Group
 @onready var group_code: LineEdit = $Control/VBoxContainer/VBoxContainer/VBoxContainer3/Code
@@ -10,6 +11,7 @@ func _ready() -> void:
 	#group page setup
 	join_button.pressed.connect(_join)
 	create_button.pressed.connect(_create)
+	back_button.pressed.connect(_back)
 	warning.text = ""
 	#group database setup
 	var dir = DirAccess.open("user://")
@@ -48,6 +50,7 @@ func _create():
 	new_group["name"] = group_name.text
 	new_group["code"] = group_code.text
 	new_group["cart"] = []
+	new_group["ready"] = []
 	if group_list.add_group(new_group):
 		print("User " + ScriptManager.user["name"] + " created group: " + new_group["name"])
 		group_name.text = ""
@@ -55,3 +58,7 @@ func _create():
 	else:
 		print("User " + ScriptManager.user["name"] + " failed to created group with " + new_group["name"] + " as the name")
 		warning.text = "[center]This group name has been taken."
+
+func _back():
+	print("User " + ScriptManager.user["name"] + " logged out")
+	get_tree().change_scene_to_file("res://scenes/login_page.tscn")

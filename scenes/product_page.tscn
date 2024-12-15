@@ -1,9 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bnonaagr5oaab"]
+[gd_scene load_steps=7 format=3 uid="uid://1lcsomb4o70n"]
 
 [ext_resource type="Script" path="res://scripts/product_page.gd" id="1_fu36u"]
 [ext_resource type="Texture2D" uid="uid://cbs33q5bkncpq" path="res://icon.svg" id="2_1u15u"]
 [ext_resource type="Texture2D" uid="uid://b2wifsvg33c63" path="res://sprites/white background.jpg" id="2_meuuj"]
-[ext_resource type="PackedScene" path="res://scenes/popup.tscn" id="3_a2hxn"]
+[ext_resource type="PackedScene" uid="uid://c02pya481eob1" path="res://scenes/popup.tscn" id="3_a2hxn"]
 
 [sub_resource type="SystemFont" id="SystemFont_ynsw5"]
 

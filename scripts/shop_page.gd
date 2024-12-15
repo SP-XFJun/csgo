@@ -4,6 +4,7 @@ extends Node2D
 
 @onready var background: Sprite2D = $Background
 @onready var cart_page_button: TextureRect = $"Control/Cart Page Button"
+@onready var back_button: Button = $"Control/Back Button"
 
 #Predefined shop product
 var shop_product: Array = [
@@ -41,9 +42,14 @@ var shop_product: Array = [
 
 func _ready() -> void:
 	#shop page setup
+	back_button.pressed.connect(_back)
 	for i in range(30):
 		var the_product = product_list.get_child(floor(i / 5)).get_child(i % 5)
 		the_product.product_name = shop_product[i]["name"]
 		the_product.product_icon = shop_product[i]["icon"]
 		the_product.product_price = shop_product[i]["price"]
 		the_product.product_setup()
+
+func _back():
+	print("User " + ScriptManager.user["name"] + " logged out")
+	get_tree().change_scene_to_file("res://scenes/login_page.tscn")

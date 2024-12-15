@@ -26,3 +26,10 @@ func update_cart(group:Dictionary,cart:Array) -> void:
 			group_list[i]["cart"] = cart
 			ResourceSaver.save(self, "user://resources/group.tres")
 			return
+
+func update_member(group:Dictionary,member:Array) -> void:
+	for i in range(group_list.size()):
+		if group_list[i]["name"] == group["name"]:
+			group_list[i]["ready"] = member
+			ResourceSaver.save(self, "user://resources/group.tres")
+			return

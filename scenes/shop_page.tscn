@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://drk2dup4orc8"]
+[gd_scene load_steps=8 format=3 uid="uid://bxqax48xfuc4e"]
 
 [ext_resource type="Script" path="res://scripts/shop_page.gd" id="1_ik87o"]
 [ext_resource type="Texture2D" uid="uid://b2wifsvg33c63" path="res://sprites/white background.jpg" id="2_dwhcj"]
@@ -34,7 +34,17 @@ scale = Vector2(0.75, 0.75)
 texture = ExtResource("3_dbktf")
 script = ExtResource("4_mhrgi")
 
+[node name="Back Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 992.0
+offset_top = 600.0
+offset_right = 1117.0
+offset_bottom = 634.0
+theme_override_font_sizes/font_size = 18
+text = "Back to Login"
+
 [node name="Software Icon" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_left = 32.0
 offset_top = 32.0
 offset_right = 160.0

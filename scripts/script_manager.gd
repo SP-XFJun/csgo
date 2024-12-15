@@ -5,6 +5,7 @@ var group:Dictionary
 var cart:Array = []
 var total_cost:float = 0
 var delivery_fees:float = 0
+var total_member:Array = []
 
 func add_product(product:Dictionary) -> void:
 	#add product to cart
