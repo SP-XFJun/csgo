@@ -30,9 +30,6 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
         
-      - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install -y unzip
-
       # Exporting the software
       - name: export software
         # Use latest version (see releases for all versions)
@@ -43,9 +40,6 @@ jobs:
           godot_export_templates_download_url: https://downloads.tuxfamily.org/godotengine/4.3/Godot_v4.3-stable_export_templates.tpz
           # relative_project_path: ./
           archive_output: true
-
-      - name: List export directory
-        run: ls -R /home/runner/.local/share/godot/archives/
         
       # Release and create artifact for the export
       - name: create release
