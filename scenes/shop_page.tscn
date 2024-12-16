@@ -76,6 +76,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Water"
+product_icon = "res://sprites/product/water.png"
 product_price = 10.5
 
 [node name="TextureRect2" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer"]
@@ -84,6 +85,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Banana"
+product_icon = "res://sprites/product/banana.png"
 product_price = 3.75
 
 [node name="TextureRect3" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer"]
@@ -92,6 +94,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Lettuce"
+product_icon = "res://sprites/product/lettuce.png"
 product_price = 3.95
 
 [node name="TextureRect4" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer"]
@@ -100,6 +103,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Orange"
+product_icon = "res://sprites/product/orange.png"
 product_price = 3.99
 
 [node name="TextureRect8" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer"]
@@ -108,6 +112,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Carrot"
+product_icon = "res://sprites/product/carrot.png"
 product_price = 6.99
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Control/ScrollContainer/Product List"]
@@ -121,6 +126,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Kiwi"
+product_icon = "res://sprites/product/kiwi.png"
 product_price = 7.99
 
 [node name="TextureRect" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer2"]
@@ -129,6 +135,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Peach"
+product_icon = "res://sprites/product/peach.png"
 product_price = 13.75
 
 [node name="TextureRect2" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer2"]
@@ -137,6 +144,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Lemon"
+product_icon = "res://sprites/product/lemon.png"
 product_price = 7.5
 
 [node name="TextureRect10" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer2"]
@@ -145,6 +153,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Broccoli"
+product_icon = "res://sprites/product/broccoli.png"
 product_price = 12.95
 
 [node name="TextureRect9" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer2"]
@@ -153,6 +162,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Tomato"
+product_icon = "res://sprites/product/tomato.png"
 product_price = 4.7
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="Control/ScrollContainer/Product List"]
@@ -166,6 +176,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Ketchup"
+product_icon = "res://sprites/product/ketchup.png"
 product_price = 15.5
 
 [node name="TextureRect7" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer3"]
@@ -174,6 +185,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Potato"
+product_icon = "res://sprites/product/potato.png"
 product_price = 4.25
 
 [node name="TextureRect4" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer3"]
@@ -182,6 +194,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Cucumber"
+product_icon = "res://sprites/product/cucumber.png"
 product_price = 5.8
 
 [node name="TextureRect3" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer3"]
@@ -190,6 +203,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Corn"
+product_icon = "res://sprites/product/corn.png"
 product_price = 10.5
 
 [node name="TextureRect10" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer3"]
@@ -198,6 +212,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Mushroom"
+product_icon = "res://sprites/product/mushroom.png"
 product_price = 9.99
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="Control/ScrollContainer/Product List"]
@@ -211,6 +226,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Apple"
+product_icon = "res://sprites/product/apple.png"
 product_price = 5.99
 
 [node name="TextureRect8" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer4"]
@@ -219,6 +235,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Apple iPhone 12 256 GB"
+product_icon = "res://sprites/product/iphone.png"
 product_price = 1299.99
 
 [node name="TextureRect7" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer4"]
@@ -227,6 +244,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Onion"
+product_icon = "res://sprites/product/onion.png"
 product_price = 4.5
 
 [node name="TextureRect12" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer4"]
@@ -235,6 +253,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Chicken"
+product_icon = "res://sprites/product/chicken.png"
 product_price = 18.9
 
 [node name="TextureRect11" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer4"]
@@ -243,6 +262,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Beef"
+product_icon = "res://sprites/product/beef.png"
 product_price = 33.5
 
 [node name="HBoxContainer5" type="HBoxContainer" parent="Control/ScrollContainer/Product List"]
@@ -256,6 +276,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Milk"
+product_icon = "res://sprites/product/milk.png"
 product_price = 14.99
 
 [node name="TextureRect9" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer5"]
@@ -264,6 +285,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Yogurt"
+product_icon = "res://sprites/product/yogurt.png"
 product_price = 6.99
 
 [node name="TextureRect8" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer5"]
@@ -272,6 +294,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Shopping Bag"
+product_icon = "res://sprites/product/shopping_bag.png"
 product_price = 7.5
 
 [node name="TextureRect7" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer5"]
@@ -280,6 +303,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Shampoo"
+product_icon = "res://sprites/product/shampoo.png"
 product_price = 21.99
 
 [node name="TextureRect" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer5"]
@@ -288,6 +312,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Pen"
+product_icon = "res://sprites/product/pen.png"
 product_price = 9.99
 
 [node name="HBoxContainer6" type="HBoxContainer" parent="Control/ScrollContainer/Product List"]
@@ -301,6 +326,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Eraser"
+product_icon = "res://sprites/product/eraser.png"
 product_price = 1.5
 
 [node name="TextureRect3" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer6"]
@@ -309,6 +335,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Desk Lamp"
+product_icon = "res://sprites/product/desk_lamp.png"
 product_price = 14.99
 
 [node name="TextureRect4" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer6"]
@@ -317,6 +344,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Xiaomi Redmi 14C Dual SIM"
+product_icon = "res://sprites/product/xiaomi.png"
 product_price = 479.99
 
 [node name="TextureRect5" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer6"]
@@ -325,6 +353,7 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "Asus ROG Azoth Extreme RGB Gaming Keyboard"
+product_icon = "res://sprites/product/keyboard.png"
 product_price = 2149.99
 
 [node name="TextureRect6" type="TextureRect" parent="Control/ScrollContainer/Product List/HBoxContainer6"]
@@ -333,4 +362,5 @@ texture = ExtResource("2_hjlgs")
 stretch_mode = 2
 script = ExtResource("3_b2ay2")
 product_name = "CSGO Shanghai Major Pass"
+product_icon = "res://sprites/product/csgo_pass.png"
 product_price = 69.99

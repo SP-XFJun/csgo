@@ -23,6 +23,7 @@ offset_right = 1152.0
 offset_bottom = 648.0
 
 [node name="Back Button" type="Button" parent="Control"]
+layout_mode = 0
 offset_left = 992.0
 offset_top = 600.0
 offset_right = 1117.0

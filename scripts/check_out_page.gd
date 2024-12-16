@@ -1,12 +1,15 @@
 extends Node2D
 
 @onready var total_price: RichTextLabel = $"Control/VBoxContainer/HBoxContainer/VBoxContainer/Total Price"
+@onready var delivery_fee: RichTextLabel = $"Control/VBoxContainer/Delivery Fee"
 
 @onready var background: Sprite2D = $Background
 @onready var check_out_button: Button = $"Control/VBoxContainer/HBoxContainer2/VBoxContainer/Check Out Button"
 @onready var ready_count: RichTextLabel = $"Control/VBoxContainer/HBoxContainer2/VBoxContainer/Ready Count"
 @onready var total_cost: RichTextLabel = $"Control/VBoxContainer/HBoxContainer2/Total Cost"
 @onready var return_button: Button = $"Control/VBoxContainer/HBoxContainer2/Return Button"
+
+var popup_scene = preload("res://scenes/popup.tscn")
 
 var able_check_out = true
 
@@ -29,6 +32,7 @@ func _process(delta: float) -> void:
 	ready_count.text = "[center][outline_size=8]" + str(ScriptManager.group["ready"].size()) + " / " + str(ScriptManager.total_member.size())
 	if able_check_out:
 		total_cost.text = "[wave amp=20 freq=2][outline_size=10] $" + str(ScriptManager.total_cost + ScriptManager.delivery_fees)
+		delivery_fee.text = "Delivery fees: $" + str(ScriptManager.delivery_fees)
 
 func _check_out():
 	#when user is ready to check out
@@ -50,7 +54,14 @@ func _check_out():
 				if group_list.group_list[i]["name"] == ScriptManager.group["name"]:
 					group_list.group_list[i]["cart"] = []
 					group_list.group_list[i]["ready"] = []
+					able_check_out = false
+					total_cost.text = "[wave amp=20 freq=2][outline_size=10] $0"
+					delivery_fee.text = "Delivery fees: $0"
 					ResourceSaver.save(group_list, "user://resources/group.tres")
+					get_tree().current_scene.cart_reset()
+					var popup = popup_scene.instantiate()
+					popup.message = "The cart has checked out!\nAll payments received"
+					get_tree().current_scene.add_child(popup)
 					print("Check out is complete!")
 					return
 			print("Check out failed")

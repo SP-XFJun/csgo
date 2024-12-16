@@ -7,6 +7,7 @@
 [sub_resource type="CanvasTexture" id="CanvasTexture_ewbed"]
 
 [sub_resource type="SystemFont" id="SystemFont_jaxrk"]
+subpixel_positioning = 0
 
 [node name="Popup" type="Node2D"]
 top_level = true
@@ -42,4 +43,4 @@ offset_top = 400.0
 offset_right = 654.0
 offset_bottom = 442.0
 theme_override_font_sizes/font_size = 24
-text = "Check in cart"
+text = "Go to the cart"

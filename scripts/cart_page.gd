@@ -41,5 +41,10 @@ func page_setup() -> void:
 	ScriptManager.delivery_fees = round_to_dec((5.0 / total_member.size()),2)
 	ScriptManager.total_member = total_member
 
+func cart_reset():
+	#reset every slot
+	for i in range(30):
+		product_list.get_child(floor(i / 5)).get_child(i % 5).product = {}
+
 func round_to_dec(num, digit):
 	return ceil(num * pow(10.0, digit)) / pow(10.0, digit)

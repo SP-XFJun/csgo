@@ -4,13 +4,14 @@ extends Node2D
 @onready var product_name: RichTextLabel = $"Control/VBoxContainer/HBoxContainer/VBoxContainer/Product Name"
 @onready var product_price: RichTextLabel = $Control/VBoxContainer/HBoxContainer/VBoxContainer/Price
 @onready var background: Sprite2D = $"Background"
-@onready var popup: Node2D = $Popup
 
 @onready var add_cart: Button = $"Control/VBoxContainer/HBoxContainer2/Add Cart"
 @onready var remove: Button = $Control/VBoxContainer/HBoxContainer2/remove
 @onready var count: RichTextLabel = $Control/VBoxContainer/HBoxContainer2/Count
 @onready var add: Button = $Control/VBoxContainer/HBoxContainer2/add
 @onready var return_button: Button = $"Control/VBoxContainer/HBoxContainer2/Return Button"
+
+var popup_scene = preload("res://scenes/popup.tscn")
 
 var order_count:int = 1
 var price:float
@@ -22,7 +23,6 @@ func _ready() -> void:
 	add_cart.pressed.connect(_add_cart)
 	remove.pressed.connect(_remove)
 	add.pressed.connect(_add)
-	popup.visible = false
 	var current_product = load("user://resources/current_product.tres")
 	if current_product:
 		product_name.text = current_product.product_name
@@ -42,14 +42,22 @@ func _add_cart():
 	product_info["price"] = product.product_price
 	product_info["amount"] = order_count
 	product_info["member"] = ScriptManager.user["name"]
-	#reset order_count for action feedback
-	order_count = 1
+	
 	var group_list = ResourceLoader.load("user://resources/group.tres", "", ResourceLoader.CACHE_MODE_IGNORE_DEEP)
 	ScriptManager.update_cart()
-	ScriptManager.add_product(product_info.duplicate(true))
-	group_list.update_cart(ScriptManager.group,ScriptManager.cart)
-	popup.visible = true
-	print("User " + ScriptManager.user["name"] + " purchased " + str(product_info["amount"]) + " " + product_info["name"])
+	if ScriptManager.add_product(product_info.duplicate(true)):
+		#reset order_count for action feedback
+		order_count = 1
+		group_list.update_cart(ScriptManager.group,ScriptManager.cart)
+		var popup = popup_scene.instantiate()
+		popup.message = "The product has been added\nto you cart!"
+		get_tree().current_scene.add_child(popup)
+		print("User " + ScriptManager.user["name"] + " purchased " + str(product_info["amount"]) + " " + product_info["name"])
+	else:
+		var popup = popup_scene.instantiate()
+		popup.message = "Unable to add the product\nThe cart is full"
+		get_tree().current_scene.add_child(popup)
+		print("User " + ScriptManager.user["name"] + " tried to purchase " + str(product_info["amount"]) + " " + product_info["name"] + " but cart is full")
 
 func _remove():
 	#reducing order count by 1
